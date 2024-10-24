@@ -1,0 +1,7 @@
+{
+  "name": "favourite-pet-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
