@@ -1,0 +1,54 @@
+.full-height {
+  height: 100%;
+}
+
+.input-container {
+  max-width: 830px;
+  margin: 20px auto;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 830px;
+  justify-content: center;
+}
+
+.list-item {
+  width: 200px;
+  height: 200px;
+
+  label {
+    display: block;
+    border: 4px solid;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  input {
+    position: absolute;
+    left: -99999px;
+  }
+
+  input:checked + label {
+    border-color: var(--ion-color-success);
+  }
+
+  input:focus-visible + label {
+    border-color: var(--ion-color-primary);
+  }
+}
+
+.list-height {
+  height: 200px;
+}
