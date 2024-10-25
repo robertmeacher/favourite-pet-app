@@ -19,6 +19,8 @@ const Home: React.FC = () => {
   const [dogs, setDogs] = useState<DogProps[]>()
 
   const getImages = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+
     const data = await fetch(
       'https://api.thedogapi.com/v1/images/search?limit=10'
     )
@@ -29,7 +31,7 @@ const Home: React.FC = () => {
   }
 
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading && typeof dogs !== 'undefined') {
       setIsLoading(false)
     }
   }, [dogs])

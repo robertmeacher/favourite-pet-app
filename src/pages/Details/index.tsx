@@ -32,7 +32,7 @@ const Details: React.FC = () => {
   }
 
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading && typeof dogs !== 'undefined') {
       setIsLoading(false)
     }
   }, [dogs])
